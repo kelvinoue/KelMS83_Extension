@@ -4,8 +4,6 @@
  * Script: pqbypass.js
 */
 
-importPackage(Packages.client.command);
-
 var status;
 var eim;
 

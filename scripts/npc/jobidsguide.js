@@ -4,8 +4,6 @@
  * Script: jobidsguide.js
 */
 
-importPackage(Packages.client.command);
-
 var status;
 
 var types = ["Adventurers/Explorers", "Knights of Cygnus", "Aran", "Others"];
