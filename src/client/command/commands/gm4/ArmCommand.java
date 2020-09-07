@@ -87,7 +87,7 @@ public class ArmCommand extends Command {
             1032003, //Amethyst earrings
             1012098, //Maple leaf str
             1122000, //Horntail necklace
-            0 //Placeholder for shields (intmode only)
+            0 //Placeholder for shields
         };
         
         //For int/matk
@@ -100,7 +100,7 @@ public class ArmCommand extends Command {
         //For str
         else if (strmode == true) {
             int job = player.getJob().getId();
-            if (job == 100 || (job >= 110 && job <= 122)) {
+            if (job >= 100 && job <= 122) {
                 newitem[8] = 1092030; //Maple shield
             }
         }
@@ -127,7 +127,7 @@ public class ArmCommand extends Command {
             newitem[0] = 1112407; //Circle of Ancient Thought
             newitem[1] = 0;  //Setting the next item as 0 breaks the loop so that no other items are generated
         }
-        //Spd mode
+        //Speed mode
         else if (spdmode == true) {
             newitem[0] = 1112408; //Circle of Ancient Strength
             newitem[1] = 0;  //Setting the next item as 0 breaks the loop so that no other items are generated

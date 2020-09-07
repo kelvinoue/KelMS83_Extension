@@ -202,7 +202,7 @@ public class CharCommand extends Command {
             }
             else if (newlevel >= 30) {
                 newmp = newmp + 150;
-                if (jobid != 200 && jobid != 2000) {
+                if (jobid != 200 && jobid != 1200) {
                     newmp = newmp + 500;
                 }
             }
@@ -216,7 +216,7 @@ public class CharCommand extends Command {
             }
             else if (newlevel >= 30) {
                 newhp = newhp + 200;
-                if (jobid != 300 && jobid != 3000) {
+                if (jobid != 300 && jobid != 1300) {
                     newhp = newhp + 350;
                     newmp = newmp + 200;
                 }
@@ -231,7 +231,7 @@ public class CharCommand extends Command {
             }
             else if (newlevel >= 30) {
                 newhp = newhp + 200;
-                if (jobid != 400 && jobid != 4000) {
+                if (jobid != 400 && jobid != 1400) {
                     newhp = newhp + 350;
                     newmp = newmp + 200;
                 }
@@ -246,7 +246,7 @@ public class CharCommand extends Command {
             }
             else if (newlevel >= 30) {
                 newhp = newhp + 200;
-                if (jobid != 500 && jobid != 5000) {
+                if (jobid != 500 && jobid != 1500) {
                     newhp = newhp + 250;
                     newmp = newmp + 175;
                 }
@@ -937,8 +937,8 @@ public class CharCommand extends Command {
             victim.changeSkillLevel(skill, (byte) -1, -1, -1);
         }
         
-        //Max skills for ms/gmmode
-        if (gmmode == true || msmode == false) {
+        //Max skills
+        if (msmode == false) {
             for (MapleData skill_ : MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/" + "String.wz")).getData("Skill.img").getChildren()) {
                 try {
                     Skill skill = SkillFactory.getSkill(Integer.parseInt(skill_.getName()));
